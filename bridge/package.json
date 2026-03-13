@@ -1,0 +1,18 @@
+{
+  "name": "extrudly-bridge",
+  "version": "1.0.0",
+  "description": "Extrudly home bridge — relays Creality K2 Plus print data and camera stream to Vercel",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "mqtt": "^5.3.4",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "ws": "^8.16.0",
+    "node-rtsp-stream": "^0.0.9",
+    "dotenv": "^16.4.5"
+  }
+}
