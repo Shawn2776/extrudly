@@ -9,19 +9,15 @@ const products = [
     category: "Desk & workspace",
     price: "From $12.00",
     material: "PLA+",
-    color: "#F1EFE8",
+    bg: "bg-[#F1EFE8]",
     icon: (
       <svg width="100" height="100" viewBox="0 0 72 72" fill="none">
-        <rect x="16" y="28" width="40" height="26" rx="5" fill="#3d3d3a" />
-        <rect x="24" y="18" width="24" height="12" rx="3" fill="#2C2C2A" />
-        <rect x="28" y="54" width="6" height="10" rx="2" fill="#2C2C2A" />
-        <rect x="38" y="54" width="6" height="10" rx="2" fill="#2C2C2A" />
-        <rect x="20" y="64" width="32" height="4" rx="2" fill="#1a1a18" />
-        <circle cx="30" cy="41" r="5" fill="none" stroke="#EF9F27" strokeWidth="1.5" />
-        <circle cx="30" cy="41" r="2" fill="#EF9F27" />
-        <rect x="38" y="37" width="12" height="8" rx="2" fill="#444441" />
-        <line x1="40" y1="40" x2="48" y2="40" stroke="#EF9F27" strokeWidth="1" opacity="0.6" />
-        <line x1="40" y1="43" x2="46" y2="43" stroke="#EF9F27" strokeWidth="1" opacity="0.4" />
+        <rect x="18" y="60" width="36" height="6" rx="3" fill="#2C2C2A" />
+        <rect x="33" y="28" width="6" height="34" rx="3" fill="#3d3d3a" />
+        <circle cx="36" cy="24" r="16" fill="#3d3d3a" />
+        <circle cx="36" cy="24" r="12" fill="#2C2C2A" />
+        <circle cx="36" cy="24" r="9" fill="none" stroke="#EF9F27" strokeWidth="2" />
+        <circle cx="36" cy="24" r="3" fill="#EF9F27" />
       </svg>
     ),
   },
@@ -31,18 +27,16 @@ const products = [
     category: "Tabletop gaming",
     price: "From $28.00",
     material: "PETG",
-    color: "#FAEEDA",
+    bg: "bg-[#FAEEDA]",
     icon: (
       <svg width="100" height="100" viewBox="0 0 72 72" fill="none">
-        <rect x="10" y="22" width="52" height="34" rx="6" fill="#BA7517" />
-        <rect x="10" y="22" width="52" height="8" rx="6" fill="#854F0B" />
-        <rect x="14" y="34" width="10" height="14" rx="2" fill="#EF9F27" opacity="0.8" />
-        <rect x="27" y="34" width="10" height="14" rx="2" fill="#EF9F27" opacity="0.8" />
-        <rect x="40" y="34" width="10" height="14" rx="2" fill="#EF9F27" opacity="0.8" />
-        <rect x="53" y="34" width="4" height="14" rx="2" fill="#EF9F27" opacity="0.5" />
-        <rect x="14" y="50" width="49" height="3" rx="1" fill="#FAC775" opacity="0.4" />
-        <polygon points="32,56 40,56 38,64 34,64" fill="#BA7517" />
-        <rect x="28" y="64" width="16" height="4" rx="2" fill="#854F0B" />
+        <rect x="8" y="28" width="56" height="34" rx="5" fill="#BA7517" />
+        <rect x="8" y="20" width="56" height="12" rx="5" fill="#854F0B" />
+        <rect x="16" y="36" width="8" height="20" rx="2" fill="#EF9F27" opacity="0.75" />
+        <rect x="27" y="36" width="8" height="20" rx="2" fill="#EF9F27" opacity="0.75" />
+        <rect x="38" y="36" width="8" height="20" rx="2" fill="#EF9F27" opacity="0.75" />
+        <rect x="49" y="36" width="8" height="20" rx="2" fill="#EF9F27" opacity="0.75" />
+        <rect x="30" y="17" width="12" height="5" rx="2" fill="#FAC775" opacity="0.8" />
       </svg>
     ),
   },
@@ -52,15 +46,17 @@ const products = [
     category: "Home organization",
     price: "From $6.00",
     material: "PLA",
-    color: "#F1EFE8",
+    bg: "bg-[#F1EFE8]",
     icon: (
       <svg width="100" height="100" viewBox="0 0 72 72" fill="none">
-        <rect x="26" y="12" width="20" height="48" rx="6" fill="#3d3d3a" />
-        <rect x="30" y="18" width="12" height="28" rx="2" fill="#2C2C2A" />
-        <circle cx="36" cy="54" r="4" fill="#EF9F27" />
-        <rect x="18" y="60" width="36" height="6" rx="3" fill="#444441" />
-        <path d="M20 30 Q14 30 14 36 Q14 42 20 42" stroke="#EF9F27" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        <path d="M52 30 Q58 30 58 36 Q58 42 52 42" stroke="#EF9F27" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <rect x="10" y="28" width="14" height="16" rx="4" fill="#3d3d3a" />
+        <rect x="29" y="28" width="14" height="16" rx="4" fill="#3d3d3a" />
+        <rect x="48" y="28" width="14" height="16" rx="4" fill="#3d3d3a" />
+        <rect x="15" y="24" width="4" height="8" rx="2" fill="#F1EFE8" />
+        <rect x="34" y="24" width="4" height="8" rx="2" fill="#F1EFE8" />
+        <rect x="53" y="24" width="4" height="8" rx="2" fill="#F1EFE8" />
+        <path d="M6 36 Q17 36 17 36 Q25 36 29 36 Q36 36 36 36 Q43 36 48 36 Q55 36 66 36" stroke="#EF9F27" strokeWidth="3" fill="none" strokeLinecap="round" />
+        <rect x="6" y="44" width="60" height="6" rx="3" fill="#444441" />
       </svg>
     ),
   },
@@ -70,15 +66,18 @@ const products = [
     category: "Home organization",
     price: "From $8.00",
     material: "PLA+",
-    color: "#F1EFE8",
+    bg: "bg-[#F1EFE8]",
     icon: (
       <svg width="100" height="100" viewBox="0 0 72 72" fill="none">
-        <rect x="20" y="14" width="32" height="8" rx="3" fill="#3d3d3a" />
-        <rect x="24" y="10" width="6" height="6" rx="2" fill="#2C2C2A" />
-        <rect x="42" y="10" width="6" height="6" rx="2" fill="#2C2C2A" />
-        <path d="M28 22 L28 44 Q28 54 38 54 Q48 54 48 44 L48 38" stroke="#444441" strokeWidth="6" fill="none" strokeLinecap="round" />
-        <circle cx="48" cy="34" r="5" fill="none" stroke="#EF9F27" strokeWidth="2" />
-        <line x1="34" y1="22" x2="34" y2="38" stroke="#2C2C2A" strokeWidth="4" strokeLinecap="round" />
+        <rect x="8" y="14" width="56" height="10" rx="3" fill="#3d3d3a" />
+        <circle cx="18" cy="19" r="3" fill="#2C2C2A" />
+        <circle cx="54" cy="19" r="3" fill="#2C2C2A" />
+        <path d="M20 24 L20 46 Q20 56 28 56" stroke="#444441" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M36 24 L36 46 Q36 56 44 56" stroke="#444441" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M52 24 L52 46 Q52 56 60 56" stroke="#444441" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="28" cy="56" r="4" fill="#EF9F27" />
+        <circle cx="44" cy="56" r="4" fill="#EF9F27" />
+        <circle cx="60" cy="56" r="4" fill="#EF9F27" />
       </svg>
     ),
   },
@@ -88,17 +87,17 @@ const products = [
     category: "Tabletop gaming",
     price: "From $16.00",
     material: "PETG",
-    color: "#FAEEDA",
+    bg: "bg-[#FAEEDA]",
     icon: (
       <svg width="100" height="100" viewBox="0 0 72 72" fill="none">
-        <rect x="10" y="18" width="52" height="40" rx="6" fill="#BA7517" />
-        <rect x="14" y="22" width="44" height="32" rx="4" fill="#854F0B" />
-        <rect x="18" y="26" width="16" height="12" rx="3" fill="#EF9F27" opacity="0.7" />
-        <rect x="38" y="26" width="16" height="12" rx="3" fill="#EF9F27" opacity="0.7" />
-        <rect x="18" y="42" width="36" height="8" rx="3" fill="#EF9F27" opacity="0.5" />
-        <circle cx="22" cy="30" r="2" fill="#854F0B" />
-        <circle cx="30" cy="30" r="2" fill="#854F0B" />
-        <circle cx="26" cy="34" r="2" fill="#854F0B" />
+        <rect x="8" y="24" width="56" height="36" rx="6" fill="#BA7517" />
+        <rect x="14" y="30" width="44" height="24" rx="3" fill="#854F0B" />
+        <rect x="18" y="34" width="14" height="14" rx="3" fill="#EF9F27" />
+        <circle cx="25" cy="41" r="2" fill="#854F0B" />
+        <rect x="36" y="34" width="14" height="14" rx="3" fill="#EF9F27" />
+        <circle cx="40" cy="38" r="1.5" fill="#854F0B" />
+        <circle cx="46" cy="44" r="1.5" fill="#854F0B" />
+        <circle cx="43" cy="41" r="1.5" fill="#854F0B" />
       </svg>
     ),
   },
@@ -108,252 +107,84 @@ const products = [
     category: "Desk & workspace",
     price: "From $9.00",
     material: "PLA+",
-    color: "#F1EFE8",
+    bg: "bg-[#F1EFE8]",
     icon: (
       <svg width="100" height="100" viewBox="0 0 72 72" fill="none">
-        <rect x="24" y="10" width="24" height="40" rx="5" fill="#3d3d3a" />
-        <rect x="28" y="15" width="16" height="26" rx="2" fill="#2C2C2A" />
-        <circle cx="36" cy="46" r="3" fill="#EF9F27" />
-        <path d="M18 50 L24 50 L24 58 L48 58 L48 50 L54 50" stroke="#444441" strokeWidth="3" fill="none" strokeLinecap="round" />
-        <rect x="20" y="58" width="32" height="5" rx="2" fill="#2C2C2A" />
+        <rect x="14" y="58" width="44" height="6" rx="3" fill="#2C2C2A" />
+        <line x1="22" y1="58" x2="36" y2="20" stroke="#444441" strokeWidth="5" strokeLinecap="round" />
+        <rect x="30" y="14" width="24" height="40" rx="4" fill="#3d3d3a" />
+        <rect x="33" y="18" width="18" height="28" rx="2" fill="#2C2C2A" />
+        <circle cx="42" cy="50" r="2.5" fill="#EF9F27" />
+        <rect x="38" y="15" width="8" height="3" rx="1.5" fill="#2C2C2A" />
       </svg>
     ),
   },
 ]
 
 const MaterialBadge = ({ material }) => (
-  <span className="material-badge">
+  <span className="text-[11px] font-bold tracking-widest uppercase text-[#633806] bg-[#FAEEDA] px-2.5 py-0.5 rounded-full">
     {material}
-    <style jsx>{`
-      .material-badge {
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #633806;
-        background: #FAEEDA;
-        padding: 3px 10px;
-        border-radius: 20px;
-      }
-    `}</style>
   </span>
 )
 
 export default function CatalogPreview() {
   return (
-    <section className="catalog">
-      <div className="catalog-inner">
-        <div className="catalog-header">
-          <div className="catalog-header-left">
-            <span className="section-tag">Featured prints</span>
-            <h2 className="section-heading">Ready to order</h2>
-            <p className="section-sub">
-              Professionally printed, quality checked, and shipped fast.
-              Browse the full catalog for 50+ designs.
+    <section className="bg-[#F1EFE8] py-24 px-8">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+
+        {/* Header */}
+        <div className="flex items-end justify-between gap-6 flex-wrap">
+          <div className="flex flex-col gap-2 max-w-lg">
+            <span className="text-[11px] font-bold tracking-[3px] uppercase text-[#EF9F27]">
+              Featured prints
+            </span>
+            <h2 className="text-4xl font-extrabold tracking-tight text-[#2C2C2A]">
+              Ready to order
+            </h2>
+            <p className="text-[15px] text-[#888780] leading-relaxed">
+              Professionally printed, quality checked, and shipped fast. Browse the full catalog for 50+ designs.
             </p>
           </div>
-          <Link href="/catalog" className="catalog-browse-btn">
+          <Link
+            href="/catalog"
+            className="text-sm font-bold text-[#2C2C2A] border border-[#2C2C2A] px-5 py-2.5 rounded-xl hover:bg-[#2C2C2A] hover:text-white transition-colors duration-150 shrink-0"
+          >
             Browse all prints →
           </Link>
         </div>
 
-        <div className="catalog-grid">
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {products.map((product) => (
-            <Link href={`/catalog/${product.id}`} key={product.id} className="product-card">
-              <div className="product-img" style={{ background: product.color }}>
+            <Link
+              key={product.id}
+              href={`/catalog/${product.id}`}
+              className="group bg-white rounded-2xl overflow-hidden border border-[#e0ddd6] flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all duration-150"
+            >
+              {/* Image area */}
+              <div className={`${product.bg} h-44 flex items-center justify-center`}>
                 {product.icon}
               </div>
-              <div className="product-body">
-                <div className="product-meta">
-                  <span className="product-category">{product.category}</span>
+
+              {/* Body */}
+              <div className="p-5 flex flex-col gap-2.5 flex-1">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs text-[#888780]">{product.category}</span>
                   <MaterialBadge material={product.material} />
                 </div>
-                <h3 className="product-title">{product.title}</h3>
-                <div className="product-footer">
-                  <span className="product-price">{product.price}</span>
-                  <span className="product-arrow">→</span>
+                <h3 className="text-[15px] font-bold text-[#2C2C2A] tracking-tight">
+                  {product.title}
+                </h3>
+                <div className="flex items-center justify-between mt-auto pt-2.5 border-t border-[#F1EFE8]">
+                  <span className="text-[15px] font-bold text-[#EF9F27]">{product.price}</span>
+                  <span className="text-[#D3D1C7] group-hover:text-[#2C2C2A] group-hover:translate-x-0.5 transition-all duration-150">→</span>
                 </div>
               </div>
             </Link>
           ))}
         </div>
+
       </div>
-
-      <style jsx>{`
-        .catalog {
-          background: #F1EFE8;
-          padding: 96px 32px;
-        }
-
-        .catalog-inner {
-          max-width: 1200px;
-          margin: 0 auto;
-          display: flex;
-          flex-direction: column;
-          gap: 48px;
-        }
-
-        .catalog-header {
-          display: flex;
-          align-items: flex-end;
-          justify-content: space-between;
-          gap: 24px;
-          flex-wrap: wrap;
-        }
-
-        .catalog-header-left {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          max-width: 480px;
-        }
-
-        .section-tag {
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-          color: #EF9F27;
-        }
-
-        .section-heading {
-          font-size: clamp(32px, 3.5vw, 44px);
-          font-weight: 700;
-          letter-spacing: -1px;
-          color: #2C2C2A;
-          line-height: 1.1;
-        }
-
-        .section-sub {
-          font-size: 15px;
-          color: #888780;
-          line-height: 1.6;
-        }
-
-        .catalog-browse-btn {
-          font-size: 14px;
-          font-weight: 700;
-          color: #2C2C2A;
-          text-decoration: none;
-          padding: 12px 24px;
-          border: 1.5px solid #2C2C2A;
-          border-radius: 10px;
-          white-space: nowrap;
-          transition: background 0.15s, color 0.15s;
-          flex-shrink: 0;
-        }
-
-        .catalog-browse-btn:hover {
-          background: #2C2C2A;
-          color: #fff;
-        }
-
-        .catalog-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
-        }
-
-        .product-card {
-          background: #fff;
-          border-radius: 16px;
-          overflow: hidden;
-          border: 0.5px solid #e0ddd6;
-          text-decoration: none;
-          display: flex;
-          flex-direction: column;
-          transition: transform 0.15s, box-shadow 0.15s;
-        }
-
-        .product-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 24px rgba(44, 44, 42, 0.08);
-        }
-
-        .product-img {
-          height: 200px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-bottom: 0.5px solid #e0ddd6;
-        }
-
-        .product-body {
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          flex: 1;
-        }
-
-        .product-meta {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 8px;
-        }
-
-        .product-category {
-          font-size: 12px;
-          color: #888780;
-          letter-spacing: 0.3px;
-        }
-
-        .product-title {
-          font-size: 16px;
-          font-weight: 700;
-          color: #2C2C2A;
-          letter-spacing: -0.2px;
-          line-height: 1.3;
-        }
-
-        .product-footer {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-top: auto;
-          padding-top: 8px;
-          border-top: 0.5px solid #F1EFE8;
-        }
-
-        .product-price {
-          font-size: 15px;
-          font-weight: 700;
-          color: #EF9F27;
-        }
-
-        .product-arrow {
-          font-size: 16px;
-          color: #D3D1C7;
-          transition: color 0.15s, transform 0.15s;
-        }
-
-        .product-card:hover .product-arrow {
-          color: #2C2C2A;
-          transform: translateX(3px);
-        }
-
-        @media (max-width: 900px) {
-          .catalog-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-
-        @media (max-width: 600px) {
-          .catalog {
-            padding: 64px 24px;
-          }
-
-          .catalog-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .catalog-browse-btn {
-            width: 100%;
-            text-align: center;
-          }
-        }
-      `}</style>
     </section>
   )
 }
