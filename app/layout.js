@@ -48,7 +48,9 @@ export const metadata = {
     creator: "@extrudly",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   robots: {
     index: true,

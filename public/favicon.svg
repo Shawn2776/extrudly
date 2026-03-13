@@ -1,0 +1,21 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="8" fill="#2C2C2A"/>
+  <!-- Hex nut body -->
+  <polygon points="8,6 24,6 27,12 24,18 8,18 5,12" fill="#3d3d3a"/>
+  <!-- Left face shadow -->
+  <polygon points="8,6 5,12 8,18" fill="#1a1a18" opacity="0.6"/>
+  <!-- Right face highlight -->
+  <polygon points="24,6 27,12 24,18" fill="#666663" opacity="0.35"/>
+  <!-- Orange outline -->
+  <polygon points="8,6 24,6 27,12 24,18 8,18 5,12" fill="none" stroke="#EF9F27" stroke-width="0.8" opacity="0.5"/>
+  <!-- Bolt hole -->
+  <circle cx="16" cy="12" r="2.5" fill="#1a1a18"/>
+  <circle cx="16" cy="12" r="1.5" fill="#2C2C2A"/>
+  <!-- Barrel -->
+  <rect x="13" y="18" width="6" height="4" rx="1" fill="#3d3d3a"/>
+  <!-- Taper -->
+  <polygon points="13,22 19,22 18,26 14,26" fill="#3d3d3a"/>
+  <!-- Molten drop -->
+  <path d="M13,27 Q13,31 16,32 Q19,31 19,27 Z" fill="#EF9F27"/>
+</svg>
