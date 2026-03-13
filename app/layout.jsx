@@ -8,6 +8,7 @@ export const metadata = {
   description:
     "Professional 3D printing on demand. Browse our catalog or upload your own design. Printed in premium filament and shipped within 48 hours.",
   keywords: ["3D printing", "print on demand", "custom prints", "STL", "FDM", "PLA", "PETG"],
+  metadataBase: new URL("https://extrudly.com"),
   openGraph: {
     title: "Extrudly — Upload. Print. Ship.",
     description: "Professional 3D print-on-demand. Upload your design or browse 50+ ready-to-print products.",
@@ -20,7 +21,7 @@ export const metadata = {
     description: "Professional 3D print-on-demand. Upload your design or browse 50+ ready-to-print products.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
 }
 
