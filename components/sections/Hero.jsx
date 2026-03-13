@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import Link from "next/link";
+import Link from "next/link"
 
 const PrintProgress = () => (
   <svg viewBox="0 0 260 320" fill="none" className="w-full max-w-[240px] mx-auto">
@@ -14,13 +14,7 @@ const PrintProgress = () => (
     <polygon points="86,56 174,56 190,80 174,104 86,104 70,80" fill="#2C2C2A" />
     <polygon points="86,56 70,80 86,104" fill="#1a1a18" opacity="0.6" />
     <polygon points="174,56 190,80 174,104" fill="#666663" opacity="0.3" />
-    <polygon
-      points="86,56 174,56 190,80 174,104 86,104 70,80"
-      fill="none"
-      stroke="#EF9F27"
-      strokeWidth="1"
-      opacity="0.4"
-    />
+    <polygon points="86,56 174,56 190,80 174,104 86,104 70,80" fill="none" stroke="#EF9F27" strokeWidth="1" opacity="0.4" />
     <circle cx="130" cy="80" r="10" fill="#1a1a18" />
     <circle cx="130" cy="80" r="6" fill="#2C2C2A" />
     {/* Barrel */}
@@ -47,24 +41,19 @@ const PrintProgress = () => (
     <rect x="30" y="244" width="140" height="6" rx="3" fill="#EF9F27" />
     <circle cx="170" cy="247" r="5" fill="#EF9F27" />
     {/* Labels */}
-    <text x="130" y="268" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontSize="12" fill="#888780">
-      Layer 47 of 60
-    </text>
-    <text x="130" y="286" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontSize="11" fill="#5F5E5A">
-      PLA+ Charcoal — 0.2mm
-    </text>
-    <text x="130" y="304" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontSize="11" fill="#EF9F27">
-      Est. 14 min remaining
-    </text>
+    <text x="130" y="268" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontSize="12" fill="#888780">Layer 47 of 60</text>
+    <text x="130" y="286" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontSize="11" fill="#5F5E5A">PLA+ Charcoal — 0.2mm</text>
+    <text x="130" y="304" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontSize="11" fill="#EF9F27">Est. 14 min remaining</text>
   </svg>
-);
+)
 
 export default function Hero() {
   return (
     <section className="bg-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
         {/* Left — text */}
-        <div className="flex flex-col gap-6 order-2 md:order-1">
+        <div className="flex flex-col gap-6">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 bg-[#FAEEDA] text-[#633806] text-[11px] font-bold tracking-[1.5px] uppercase px-4 py-1.5 rounded-full w-fit">
             <span className="w-1.5 h-1.5 bg-[#EF9F27] rounded-full" />
@@ -73,17 +62,15 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="text-[clamp(38px,5vw,64px)] font-extrabold leading-[1.05] tracking-[-2px] text-[#2C2C2A]">
-            Your idea,
-            <br />
-            <span className="text-[#EF9F27]">printed</span> &amp;
-            <br />
+            Your idea,<br />
+            <span className="text-[#EF9F27]">printed</span> &amp;<br />
             shipped.
           </h1>
 
           {/* Sub */}
           <p className="text-[17px] text-[#5F5E5A] leading-relaxed max-w-[420px]">
-            Browse our catalog or upload your own design. We print in high-quality filament and ship straight to your
-            door — usually within 48 hours.
+            Browse our catalog or upload your own design. We print in high-quality
+            filament and ship straight to your door — usually within 48 hours.
           </p>
 
           {/* CTAs */}
@@ -114,7 +101,7 @@ export default function Hero() {
         </div>
 
         {/* Right — print card */}
-        <div className="relative flex items-center justify-center order-1 md:order-2">
+        <div className="hidden md:flex items-center justify-center">
           {/* Blob */}
           <div className="absolute w-[280px] h-[280px] md:w-[380px] md:h-[380px] bg-[#F1EFE8] rounded-[60%_40%_55%_45%/50%_60%_40%_50%] z-0" />
 
@@ -128,7 +115,8 @@ export default function Hero() {
             <PrintProgress />
           </div>
         </div>
+
       </div>
     </section>
-  );
+  )
 }
