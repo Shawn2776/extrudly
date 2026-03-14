@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 
 const NozzleMark = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
@@ -40,7 +41,7 @@ export default function Navbar() {
           <span className="text-[15px] font-bold tracking-tight text-[#2C2C2A]">extrudly</span>
         </Link>
 
-        {/* Nav links — hidden on mobile */}
+        {/* Nav links */}
         <div className="hidden md:flex items-center gap-7 flex-1">
           {navLinks.map((link) => (
             <Link
@@ -53,23 +54,32 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Actions — hidden on mobile */}
-        <div className="hidden md:flex items-center gap-2 shrink-0">
-          <Link
-            href="/login"
-            className="text-sm text-[#5F5E5A] hover:text-[#2C2C2A] hover:bg-[#F1EFE8] px-4 py-2 rounded-lg transition-colors duration-150"
-          >
-            Sign in
-          </Link>
-          <Link
-            href="/catalog"
-            className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] hover:bg-[#d98e1e] hover:text-white px-4 py-2 rounded-lg transition-colors duration-150 active:scale-[0.98]"
-          >
-            Start printing
-          </Link>
+        {/* Actions */}
+        <div className="hidden md:flex items-center gap-3 shrink-0">
+          <SignedOut>
+            <SignInButton mode="modal">
+              <button className="text-sm text-[#5F5E5A] hover:text-[#2C2C2A] hover:bg-[#F1EFE8] px-4 py-2 rounded-lg transition-colors duration-150">
+                Sign in
+              </button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <button className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] hover:bg-[#d98e1e] hover:text-white px-4 py-2 rounded-lg transition-colors duration-150">
+                Start printing
+              </button>
+            </SignUpButton>
+          </SignedOut>
+          <SignedIn>
+            <Link
+              href="/orders"
+              className="text-sm text-[#5F5E5A] hover:text-[#2C2C2A] hover:bg-[#F1EFE8] px-4 py-2 rounded-lg transition-colors duration-150"
+            >
+              My orders
+            </Link>
+            <UserButton afterSignOutUrl="/" />
+          </SignedIn>
         </div>
 
-        {/* Hamburger — mobile only */}
+        {/* Hamburger */}
         <button
           className="md:hidden flex flex-col gap-[5px] p-1"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -95,10 +105,20 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex items-center gap-3 mt-4">
-            <Link href="/login" className="text-sm text-[#5F5E5A]">Sign in</Link>
-            <Link href="/catalog" className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] px-4 py-2 rounded-lg">
-              Start printing
-            </Link>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <button className="text-sm text-[#5F5E5A]">Sign in</button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <button className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] px-4 py-2 rounded-lg">
+                  Start printing
+                </button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <Link href="/orders" className="text-sm text-[#5F5E5A]">My orders</Link>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
         </div>
       )}
