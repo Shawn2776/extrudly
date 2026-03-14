@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
+import { useState } from "react";
+import Link from "next/link";
+import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs/client";
 
 const NozzleMark = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
@@ -17,24 +17,22 @@ const NozzleMark = () => (
     <polygon points="13,22 19,22 18,26 14,26" fill="#3d3d3a" />
     <path d="M13,27 Q13,31 16,32 Q19,31 19,27 Z" fill="#EF9F27" />
   </svg>
-)
+);
 
 const navLinks = [
   { label: "Catalog", href: "/catalog" },
   { label: "Custom prints", href: "/custom" },
   { label: "Materials", href: "/materials" },
   { label: "Pricing", href: "/pricing" },
-]
+];
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-white border-b border-[#e0ddd6]">
-
       {/* Main bar */}
       <div className="max-w-[1200px] mx-auto px-8 h-14 flex items-center justify-between gap-8">
-
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <NozzleMark />
@@ -116,12 +114,14 @@ export default function Navbar() {
               </SignUpButton>
             </SignedOut>
             <SignedIn>
-              <Link href="/orders" className="text-sm text-[#5F5E5A]">My orders</Link>
+              <Link href="/orders" className="text-sm text-[#5F5E5A]">
+                My orders
+              </Link>
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </div>
         </div>
       )}
     </nav>
-  )
+  );
 }
