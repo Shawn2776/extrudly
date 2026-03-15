@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { SignInButton, SignUpButton, UserButton, useAuth } from "@clerk/nextjs"
+import { UserButton, useAuth } from "@clerk/nextjs"
 
 const NozzleMark = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
@@ -59,16 +59,18 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3 shrink-0">
           {!isSignedIn ? (
             <>
-              <SignInButton >
-                <button className="text-sm text-[#5F5E5A] hover:text-[#2C2C2A] hover:bg-[#F1EFE8] px-4 py-2 rounded-lg transition-colors duration-150">
-                  Sign in
-                </button>
-              </SignInButton>
-              <SignUpButton >
-                <button className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] hover:bg-[#d98e1e] hover:text-white px-4 py-2 rounded-lg transition-colors duration-150">
-                  Start printing
-                </button>
-              </SignUpButton>
+              <Link
+                href="/sign-in"
+                className="text-sm text-[#5F5E5A] hover:text-[#2C2C2A] hover:bg-[#F1EFE8] px-4 py-2 rounded-lg transition-colors duration-150"
+              >
+                Sign in
+              </Link>
+              <Link
+                href="/sign-up"
+                className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] hover:bg-[#d98e1e] hover:text-white px-4 py-2 rounded-lg transition-colors duration-150"
+              >
+                Start printing
+              </Link>
             </>
           ) : (
             <>
@@ -111,14 +113,12 @@ export default function Navbar() {
           <div className="flex items-center gap-3 mt-4">
             {!isSignedIn ? (
               <>
-                <SignInButton >
-                  <button className="text-sm text-[#5F5E5A]">Sign in</button>
-                </SignInButton>
-                <SignUpButton >
-                  <button className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] px-4 py-2 rounded-lg">
-                    Start printing
-                  </button>
-                </SignUpButton>
+                <Link href="/sign-in" className="text-sm text-[#5F5E5A]">
+                  Sign in
+                </Link>
+                <Link href="/sign-up" className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] px-4 py-2 rounded-lg">
+                  Start printing
+                </Link>
               </>
             ) : (
               <>
