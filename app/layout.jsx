@@ -1,5 +1,6 @@
-import { ClerkProvider } from "@clerk/nextjs"
-import "./globals.css"
+import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
 export const metadata = {
   title: {
@@ -24,14 +25,15 @@ export const metadata = {
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
-}
+};
 
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
         <body>{children}</body>
+        <Analytics />
       </html>
     </ClerkProvider>
-  )
+  );
 }
