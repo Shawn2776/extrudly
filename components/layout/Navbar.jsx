@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import Link from "next/link";
-import { SignInButton, SignUpButton, UserButton, useAuth } from "@clerk/nextjs";
+import { useState } from "react"
+import Link from "next/link"
+import { SignInButton, SignUpButton, UserButton, useAuth } from "@clerk/nextjs"
 
 const NozzleMark = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
@@ -17,23 +17,25 @@ const NozzleMark = () => (
     <polygon points="13,22 19,22 18,26 14,26" fill="#3d3d3a" />
     <path d="M13,27 Q13,31 16,32 Q19,31 19,27 Z" fill="#EF9F27" />
   </svg>
-);
+)
 
 const navLinks = [
   { label: "Catalog", href: "/catalog" },
   { label: "Custom prints", href: "/custom" },
   { label: "Materials", href: "/materials" },
   { label: "Pricing", href: "/pricing" },
-];
+]
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const { isSignedIn } = useAuth();
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const { isSignedIn } = useAuth()
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-white border-b border-[#e0ddd6]">
+
       {/* Main bar */}
       <div className="max-w-[1200px] mx-auto px-8 h-14 flex items-center justify-between gap-8">
+
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <NozzleMark />
@@ -57,12 +59,12 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3 shrink-0">
           {!isSignedIn ? (
             <>
-              <SignInButton mode="modal">
+              <SignInButton >
                 <button className="text-sm text-[#5F5E5A] hover:text-[#2C2C2A] hover:bg-[#F1EFE8] px-4 py-2 rounded-lg transition-colors duration-150">
                   Sign in
                 </button>
               </SignInButton>
-              <SignUpButton mode="modal">
+              <SignUpButton >
                 <button className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] hover:bg-[#d98e1e] hover:text-white px-4 py-2 rounded-lg transition-colors duration-150">
                   Start printing
                 </button>
@@ -109,10 +111,10 @@ export default function Navbar() {
           <div className="flex items-center gap-3 mt-4">
             {!isSignedIn ? (
               <>
-                <SignInButton mode="modal">
+                <SignInButton >
                   <button className="text-sm text-[#5F5E5A]">Sign in</button>
                 </SignInButton>
-                <SignUpButton mode="modal">
+                <SignUpButton >
                   <button className="text-sm font-bold bg-[#EF9F27] text-[#2C2C2A] px-4 py-2 rounded-lg">
                     Start printing
                   </button>
@@ -120,9 +122,7 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <Link href="/orders" className="text-sm text-[#5F5E5A]">
-                  My orders
-                </Link>
+                <Link href="/orders" className="text-sm text-[#5F5E5A]">My orders</Link>
                 <UserButton afterSignOutUrl="/" />
               </>
             )}
@@ -130,5 +130,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  );
+  )
 }
